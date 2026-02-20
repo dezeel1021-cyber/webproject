@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PHC BKD</title>
+<link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+<header>
+  <h1>B/KUDU PHCDA</h1>
+  <button onclick="toggleDark()">Dark Mode</button>
+</header>
+
+<section id="loginPage">
+  <h2>Login</h2>
+
+  <select id="role">
+    <option value="admin">Admin</option>
+    <option value="official">Official</option>
+  </select>
+
+  <input id="username" placeholder="Username">
+  <input id="password" type="id number" placeholder="id number">
+
+  <button id="loginBtn">Login</button>
+  <p id="loginMsg"></p>
+</section>
+
+<section id="adminPage" class="hidden">
+  <h2>Admin Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+  <button onclick="printPDF()">Export PDF</button>
+
+  <div class="card">
+    <h3>All PHC Data</h3>
+    <div id="adminData"></div>
+  </div>
+</section>
+
+<section id="officialPage" class="hidden">
+  <h2>Official Data Entry</h2>
+  <button onclick="logout()">Logout</button>
+
+  <div id="modulesContainer"></div>
+
+  <button onclick="submitAll()">Submit All</button>
+  <p id="status"></p>
+</section>
+
+<script src="bb.js"></script>
+</body>
+</html>
+
